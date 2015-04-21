@@ -30,7 +30,9 @@ $Id: invoice.php 1692 2012-02-26 01:26:50Z michael.oscmax@gmail.com $
 <link rel="stylesheet" type="text/css" href="includes/javascript/jquery-ui-1.8.2.custom.css">
 </head>
 <body>
-
+<?PHP
+tep_db_query("update " . TABLE_ORDERS . " set is_printed = '1' where orders_id = '" . (int)$oID . "'");
+?>
 <!-- body_text //-->
 <table border="0" width="100%" cellspacing="0" cellpadding="2">
   <tr>
